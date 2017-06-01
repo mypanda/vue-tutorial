@@ -4,7 +4,7 @@
       <ul>
         <li><router-link to="/">首页</router-link></li>
         <li><router-link to="/movies">豆瓣电影</router-link></li>
-        <li><router-link to="/movies">豆瓣</router-link></li>
+        <li><router-link to="/test">测试</router-link></li>
         <li><router-link to="/movies">电影</router-link></li>
         <li><router-link to="/movies">豆电影</router-link></li>
       </ul>

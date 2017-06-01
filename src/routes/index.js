@@ -5,7 +5,7 @@ import Console from '../components/console.vue';
 import Error from '../components/error.vue';
 import Movies from '../components/movies.vue';
 import Header from '../components/header.vue';
-
+import Test from '../components/test.vue';
 
 Vue.use(VueRouter);
 
@@ -14,7 +14,6 @@ const about = { template:'<p>about page</p>' };
 const news = { template:'<p>news page</p>' };
 const index = { template:'<p>index.js page</p>' };
 const Footer = { template:'<p>Footer page</p>' };
-
 
 const routes = [{
     path:'/',
@@ -28,6 +27,13 @@ const routes = [{
     }
 },{
     path:'/movies',components:Movies
+},{
+    path:'/test',
+    components:{
+        header:Header,
+        body:Test,
+        footer:Footer
+    }
 },{
     path:'/about',component:about
 },{

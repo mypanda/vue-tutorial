@@ -9,6 +9,50 @@
 * npm install
 * npm run dev
 
+### vuex
+* state 包含组件的状态
+* getters 是简单处理状态，然后分发给组件的mapState
+* mutation 是操作状态改变的函数，改变状态只能在这里
+* actions 异步操作状态，先要把mutations的函数包含进来
+```
+const mutations = {
+    INCREMENT(state){
+        state.count ++ 
+    }
+}
+actions = {
+    increment:({commit}) => commit('INCREMENT'),
+    incrementIfOdd({commit,state}){
+        if( (state.count) % 2 === 0 ){
+            commit('INCREMENT)
+        }
+    }
+}
+const getters = {
+    eventOrOdd:state=>state.count % 2 === 0 ? 'event' : 'odd
+}
+```
+
+```
+//定义状态
+const state = {
+	count:0
+}
+
+//修改状态全部在这里
+const mutations = {
+	INCREMENT(state){
+		state.count ++ 
+	}
+}
+
+//异步操作在这里，修改状态还是在mutations，action操作状态，先要复制一份mutations
+const actions = {
+	increment:({commit}) => commit('increment'),
+}
+```
+
+
 https://github.com/jeneser/douban/blob/master/src/store/modules/movie.js
 
 https://developers.douban.com/wiki/?title=movie_v2

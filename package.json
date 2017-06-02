@@ -1,7 +1,7 @@
 {
   "name": "vue-tutorial",
   "description": "A Vue.js project",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "mypanda <951788234@qq.com>",
   "private": true,
   "scripts": {
